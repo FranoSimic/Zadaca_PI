@@ -31,6 +31,8 @@ Potrebno je da se u bazu podataka zapisuju podaci o klijentima i radnicima. glav
 ## Zadatak
 (U root repozitorija učitajte zadatak koji ste dobili i potom ovdje stavite link na njegovo otvaranje!)
 
+https://github.com/foivz/pi2023-zadace-fsimic21/blob/master/Korisni%C4%8Dki%20zahtjevi%20-%20obrt%20za%20%C4%8Di%C5%A1%C4%87enje.pdf
+
 ## Resursi
 (Zadaće je obvezno predati u obliku Wiki stranica na ovom repozitoriju. Slike i druge artefakte koje ćete koristiti na wiki stranicama smjestite u mapu dokumentacije u repozitoriju!)
 
