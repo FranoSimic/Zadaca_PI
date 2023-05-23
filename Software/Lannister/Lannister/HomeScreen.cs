@@ -29,5 +29,9 @@ namespace Lannister {
                 MessageBox.Show($"Ima ih  {brojac}", "Obavijest", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
         }
+
+        private void BtnZaposlenici_Click(object sender, EventArgs e) {
+            new FrmWorkers().ShowDialog();
+        }
     }
 }

@@ -78,6 +78,7 @@
             this.BtnZaposlenici.TabIndex = 4;
             this.BtnZaposlenici.Text = "ZAPOSLENICI";
             this.BtnZaposlenici.UseVisualStyleBackColor = false;
+            this.BtnZaposlenici.Click += new System.EventHandler(this.BtnZaposlenici_Click);
             // 
             // HomeScreen
             // 
