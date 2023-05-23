@@ -66,5 +66,11 @@ namespace Lannister {
             Close();
             new ChangeWorker(SelectedWorker().Id).ShowDialog();
         }
+
+        private void btnCearchWorker_Click(object sender, EventArgs e) {
+            Hide();
+            Close();
+            new FrmSearchWorker().ShowDialog();
+        }
     }
 }

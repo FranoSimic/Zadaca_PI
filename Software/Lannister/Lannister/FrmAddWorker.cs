@@ -23,14 +23,19 @@ namespace Lannister {
             string Ime = txtIme.Text;
             string Prezime = txtPrezime.Text;
             string OIB = txtOIB.Text;
-            if (Lozinka == PonovljenaLozinka) {
-                WorkersRepository.AddWorker(Id_Zaposlenika, Korisnicko_ime, Lozinka, Ime, Prezime, OIB);
-                MessageBox.Show("Uspješno ste dodali zaposlenika!", "Uspješno!", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                Hide();
-                new FrmWorkers().ShowDialog();
-            } else {
-                MessageBox.Show("Lozinke se ne podudaraju!", "Problem", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            if (WorkersRepository.CheckWorkersId(Id_Zaposlenika)) MessageBox.Show($"Već postoji zaposlenik koji ima ID={Id_Zaposlenika}", "Problem", MessageBoxButtons.OK, MessageBoxIcon.Error); 
+             else {
+                if (Lozinka == PonovljenaLozinka) {
+                    WorkersRepository.AddWorker(Id_Zaposlenika, Korisnicko_ime, Lozinka, Ime, Prezime, OIB);
+                    MessageBox.Show("Uspješno ste dodali zaposlenika!", "Uspješno!", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    Hide();
+                    new FrmWorkers().ShowDialog();
+                } else {
+                    MessageBox.Show("Lozinke se ne podudaraju!", "Problem", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
             }
+
+            
         }
 
         private void BtnIzlaz_Click(object sender, EventArgs e) {

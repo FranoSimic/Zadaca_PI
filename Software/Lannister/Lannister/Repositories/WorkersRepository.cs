@@ -35,7 +35,16 @@ namespace Lannister.Repositories {
             DB.OpenConnection();
             DB.ExecuteCommand(sql);
             DB.CloseConnection();
+        }
 
+        public static bool CheckWorkersId(int id) {
+            List<Worker> workers = GetWorkersList();
+            int counter = workers.Count();
+            bool founded=false;
+            for (int i = 0; i < counter; i++) {
+                if (id == workers[i].Id) founded = true;
+            }
+            return founded;
         }
         private static Worker FetchWorker(string sql) {
             DB.OpenConnection();
