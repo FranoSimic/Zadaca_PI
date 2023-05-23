@@ -38,5 +38,11 @@ namespace Lannister {
             Close();
             new HomeScreen().ShowDialog();
         }
+
+        private void BtnAddWorker_Click(object sender, EventArgs e) {
+            Hide();
+            Close();
+            new FrmAddWorker().ShowDialog();
+        }
     }
 }
