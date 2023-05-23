@@ -65,6 +65,7 @@
             this.BtnKlijenti.TabIndex = 5;
             this.BtnKlijenti.Text = "BROJ ZAPOSLENIH";
             this.BtnKlijenti.UseVisualStyleBackColor = false;
+            this.BtnKlijenti.Click += new System.EventHandler(this.BtnKlijenti_Click);
             // 
             // BtnZaposlenici
             // 

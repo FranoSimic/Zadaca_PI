@@ -45,5 +45,19 @@ namespace Lannister.Repositories {
             };
             return worker;
         }
+
+        public static List<Worker> GetWorkersList() {
+            List<Worker> workers = new List<Worker>();
+            string sql = "SELECT * FROM LannisterTable";
+            DB.OpenConnection();
+            SqlDataReader reader = DB.GetDataReader(sql);
+            while (reader.Read()) {
+                Worker worker = CreateObject(reader);
+                workers.Add(worker);
+            }
+            reader.Close();
+            DB.CloseConnection();
+            return workers; 
+        }
     }
 }
