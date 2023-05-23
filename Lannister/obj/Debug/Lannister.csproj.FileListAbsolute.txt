@@ -1,5 +1,0 @@
-C:\Users\Viktor\source\repos\pi2023-zadace-fsimic21\Lannister\obj\Debug\Lannister.csproj.AssemblyReference.cache
-C:\Users\Viktor\source\repos\pi2023-zadace-fsimic21\Lannister\obj\Debug\Lannister.csproj.SuggestedBindingRedirects.cache
-C:\Users\Viktor\source\repos\pi2023-zadace-fsimic21\Lannister\obj\Debug\Lannister.Properties.Resources.resources
-C:\Users\Viktor\source\repos\pi2023-zadace-fsimic21\Lannister\obj\Debug\Lannister.csproj.GenerateResource.cache
-C:\Users\Viktor\source\repos\pi2023-zadace-fsimic21\Lannister\obj\Debug\Lannister.csproj.CoreCompileInputs.cache
