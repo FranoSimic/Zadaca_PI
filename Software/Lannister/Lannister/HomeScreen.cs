@@ -31,6 +31,8 @@ namespace Lannister {
         }
 
         private void BtnZaposlenici_Click(object sender, EventArgs e) {
+            Hide();
+            Close();
             new FrmWorkers().ShowDialog();
         }
     }

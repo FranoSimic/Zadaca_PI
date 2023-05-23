@@ -29,6 +29,14 @@ namespace Lannister {
             dgcWorkers.Columns["Username"].DisplayIndex = 3;
             dgcWorkers.Columns["Password"].DisplayIndex = 4;
             dgcWorkers.Columns["OIB"].DisplayIndex = 5;
+            dgcWorkers.Columns["OIB"].AutoSizeMode = DataGridViewAutoSizeColumnMode.None;
+            dgcWorkers.Columns["OIB"].Width = 200;
+        }
+
+        private void BtnBackToHomeScreen_Click(object sender, EventArgs e) {
+            Hide();
+            Close();
+            new HomeScreen().ShowDialog();
         }
     }
 }

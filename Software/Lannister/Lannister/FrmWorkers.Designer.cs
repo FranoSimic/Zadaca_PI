@@ -23,25 +23,107 @@
         /// the contents of this method with the code editor.
         /// </summary>
         private void InitializeComponent() {
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             this.dgcWorkers = new System.Windows.Forms.DataGridView();
+            this.BtnChangeWorker = new System.Windows.Forms.Button();
+            this.BtnBackToHomeScreen = new System.Windows.Forms.Button();
+            this.BtnAddWorker = new System.Windows.Forms.Button();
+            this.BtnDeleteWorker = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dgcWorkers)).BeginInit();
             this.SuspendLayout();
             // 
             // dgcWorkers
             // 
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F);
+            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgcWorkers.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
             this.dgcWorkers.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dgcWorkers.DefaultCellStyle = dataGridViewCellStyle2;
             this.dgcWorkers.Location = new System.Drawing.Point(16, 16);
             this.dgcWorkers.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
             this.dgcWorkers.Name = "dgcWorkers";
-            this.dgcWorkers.RowHeadersWidth = 51;
+            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle3.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle3.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F);
+            dataGridViewCellStyle3.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgcWorkers.RowHeadersDefaultCellStyle = dataGridViewCellStyle3;
+            this.dgcWorkers.RowHeadersWidth = 100;
+            this.dgcWorkers.RowTemplate.DefaultCellStyle.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
             this.dgcWorkers.Size = new System.Drawing.Size(978, 526);
             this.dgcWorkers.TabIndex = 5;
+            // 
+            // BtnChangeWorker
+            // 
+            this.BtnChangeWorker.BackColor = System.Drawing.SystemColors.MenuHighlight;
+            this.BtnChangeWorker.Font = new System.Drawing.Font("Arial Nova", 12F, System.Drawing.FontStyle.Bold);
+            this.BtnChangeWorker.Location = new System.Drawing.Point(508, 550);
+            this.BtnChangeWorker.Name = "BtnChangeWorker";
+            this.BtnChangeWorker.Size = new System.Drawing.Size(240, 52);
+            this.BtnChangeWorker.TabIndex = 9;
+            this.BtnChangeWorker.Text = "Izmjeni zaposlenika";
+            this.BtnChangeWorker.UseVisualStyleBackColor = false;
+            // 
+            // BtnBackToHomeScreen
+            // 
+            this.BtnBackToHomeScreen.BackColor = System.Drawing.SystemColors.MenuHighlight;
+            this.BtnBackToHomeScreen.Font = new System.Drawing.Font("Arial Nova", 12F, System.Drawing.FontStyle.Bold);
+            this.BtnBackToHomeScreen.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.BtnBackToHomeScreen.Location = new System.Drawing.Point(754, 550);
+            this.BtnBackToHomeScreen.Name = "BtnBackToHomeScreen";
+            this.BtnBackToHomeScreen.Size = new System.Drawing.Size(240, 52);
+            this.BtnBackToHomeScreen.TabIndex = 8;
+            this.BtnBackToHomeScreen.Text = "Početni zaslon";
+            this.BtnBackToHomeScreen.UseVisualStyleBackColor = false;
+            this.BtnBackToHomeScreen.Click += new System.EventHandler(this.BtnBackToHomeScreen_Click);
+            // 
+            // BtnAddWorker
+            // 
+            this.BtnAddWorker.BackColor = System.Drawing.SystemColors.MenuHighlight;
+            this.BtnAddWorker.Font = new System.Drawing.Font("Arial Nova", 12F, System.Drawing.FontStyle.Bold);
+            this.BtnAddWorker.Location = new System.Drawing.Point(16, 550);
+            this.BtnAddWorker.Name = "BtnAddWorker";
+            this.BtnAddWorker.Size = new System.Drawing.Size(240, 52);
+            this.BtnAddWorker.TabIndex = 7;
+            this.BtnAddWorker.Text = "Dodaj zaposlenika";
+            this.BtnAddWorker.UseVisualStyleBackColor = false;
+            // 
+            // BtnDeleteWorker
+            // 
+            this.BtnDeleteWorker.BackColor = System.Drawing.SystemColors.MenuHighlight;
+            this.BtnDeleteWorker.Font = new System.Drawing.Font("Arial Nova", 12F, System.Drawing.FontStyle.Bold);
+            this.BtnDeleteWorker.Location = new System.Drawing.Point(262, 550);
+            this.BtnDeleteWorker.Name = "BtnDeleteWorker";
+            this.BtnDeleteWorker.Size = new System.Drawing.Size(240, 52);
+            this.BtnDeleteWorker.TabIndex = 6;
+            this.BtnDeleteWorker.Text = "Obriši zaposlenika";
+            this.BtnDeleteWorker.UseVisualStyleBackColor = false;
             // 
             // FrmWorkers
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 25F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1010, 563);
+            this.ClientSize = new System.Drawing.Size(1010, 623);
+            this.Controls.Add(this.BtnChangeWorker);
+            this.Controls.Add(this.BtnBackToHomeScreen);
+            this.Controls.Add(this.BtnAddWorker);
+            this.Controls.Add(this.BtnDeleteWorker);
             this.Controls.Add(this.dgcWorkers);
             this.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
             this.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
@@ -57,5 +139,9 @@
         #endregion
 
         private System.Windows.Forms.DataGridView dgcWorkers;
+        private System.Windows.Forms.Button BtnChangeWorker;
+        private System.Windows.Forms.Button BtnBackToHomeScreen;
+        private System.Windows.Forms.Button BtnAddWorker;
+        private System.Windows.Forms.Button BtnDeleteWorker;
     }
 }
