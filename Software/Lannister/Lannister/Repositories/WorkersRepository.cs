@@ -14,6 +14,16 @@ namespace Lannister.Repositories {
             string sql = $"SELECT * FROM LannisterTable WHERE Korisnicko_Ime = '{username}'";
             return FetchWorker(sql);
         }
+        public static Worker GetWorkerById(int id) {
+            string sql = $"SELECT * FROM LannisterTable WHERE Id_Zaposlenika = '{id}'";
+            return FetchWorker(sql);
+        }
+        public static void DeleteWorker(int id) {
+            string sql = $"DELETE FROM LannisterTable Where ID_Zaposlenika = '{id}'";
+            DB.OpenConnection();
+            DB.ExecuteCommand(sql);
+            DB.CloseConnection();
+        }
         public static void AddWorker(int id, string Korisnicko_Ime, string Lozinka, string Ime, string Prezime, string OIB) {
             string sql = $"INSERT INTO LannisterTable (Id_Zaposlenika, Korisnicko_ime, Lozinka, Ime, prezime, OIB) VALUES ('{id}', '{Korisnicko_Ime}', '{Lozinka}', '{Ime}', '{Prezime}', '{OIB}');";
             DB.OpenConnection();

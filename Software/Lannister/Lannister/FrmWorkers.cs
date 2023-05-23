@@ -32,7 +32,9 @@ namespace Lannister {
             dgcWorkers.Columns["OIB"].AutoSizeMode = DataGridViewAutoSizeColumnMode.None;
             dgcWorkers.Columns["OIB"].Width = 200;
         }
-
+        public Worker SelectedWorker() {
+            return dgcWorkers.CurrentRow.DataBoundItem as Worker;
+        }
         private void BtnBackToHomeScreen_Click(object sender, EventArgs e) {
             Hide();
             Close();
@@ -43,6 +45,20 @@ namespace Lannister {
             Hide();
             Close();
             new FrmAddWorker().ShowDialog();
+        }
+
+        private void BtnDeleteWorker_Click(object sender, EventArgs e) {
+            new FrmDeleteWorkerConfirm().ShowDialog();
+            if (FrmDeleteWorkerConfirm.workerDeleted) {
+                int id = SelectedWorker().Id;
+                WorkersRepository.DeleteWorker(id);
+                MessageBox.Show("Uspješno ste obrisali zaposlenika!", "Uspješno", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                Hide();
+                Close();
+                new FrmWorkers().ShowDialog();
+            } else {
+                MessageBox.Show("Nije obrisan zaposlenik!", "Problem", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
         }
     }
 }
