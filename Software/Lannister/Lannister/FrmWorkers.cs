@@ -60,5 +60,11 @@ namespace Lannister {
                 MessageBox.Show("Nije obrisan zaposlenik!", "Problem", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
+
+        private void BtnChangeWorker_Click(object sender, EventArgs e) {
+            Hide();
+            Close();
+            new ChangeWorker(SelectedWorker().Id).ShowDialog();
+        }
     }
 }

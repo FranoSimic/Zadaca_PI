@@ -30,6 +30,13 @@ namespace Lannister.Repositories {
             DB.ExecuteCommand(sql);
             DB.CloseConnection();
         }
+        public static void UpdateWorker(int id, string Korisnicko_Ime, string Lozinka, string Ime, string Prezime, string OIB) {
+            string sql = $"UPDATE LannisterTable SET Korisnicko_Ime='{Korisnicko_Ime}', Lozinka = '{Lozinka}', Ime = '{Ime}', prezime = '{Prezime}', OIB = '{OIB}' WHERE Id_Zaposlenika = {id}";
+            DB.OpenConnection();
+            DB.ExecuteCommand(sql);
+            DB.CloseConnection();
+
+        }
         private static Worker FetchWorker(string sql) {
             DB.OpenConnection();
             var reader = DB.GetDataReader(sql);
