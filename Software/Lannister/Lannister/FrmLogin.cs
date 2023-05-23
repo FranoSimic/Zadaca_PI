@@ -55,7 +55,9 @@ namespace Lannister {
                         LoggedWorker = WorkersRepository.GetWorkerByUsername(txtUsername.Text);
                         if (LoggedWorker != null && LoggedWorker.CheckPassword(txtPassword.Text)) {
 
+                            HomeScreen frmHomeScreen = new HomeScreen();
                             Hide();
+                            frmHomeScreen.ShowDialog();
                             Close();
                         } else {
                             MessageBox.Show("Neispravni podaci!", "Problem", MessageBoxButtons.OK, MessageBoxIcon.Error);
