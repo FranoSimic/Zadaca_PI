@@ -17,6 +17,7 @@ namespace Lannister {
         }
 
         private void BtnIzlaz_Click(object sender, EventArgs e) {
+            Hide();
             Close();
         }
 

@@ -23,19 +23,18 @@ namespace Lannister {
                 txtId_ZaposlenikaChange.Text = worker.Id.ToString();
                 txtKorisnicko_imeChange.Text = worker.Username.ToString();
                 txtLozinkaChange.Text = worker.Password.ToString();
-                txtPonovljenaLozinkaChange.Text = worker.Password.ToString();
                 txtImeChange.Text = worker.FirstName.ToString();
                 txtPrezimeChange.Text = worker.LastName.ToString();
                 txtOIBChange.Text = worker.OIB.ToString();
             } else MessageBox.Show($"Ne postoji zaposlenik koji ima ID={id}", "Problem", MessageBoxButtons.OK, MessageBoxIcon.Error);
-
+                
 
         }
 
         private void button1_Click(object sender, EventArgs e) {
             Hide();
             Close();
-            new FrmWorkers().ShowDialog();
         }
+
     }
 }

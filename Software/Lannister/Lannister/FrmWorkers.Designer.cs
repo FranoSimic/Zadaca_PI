@@ -23,51 +23,26 @@
         /// the contents of this method with the code editor.
         /// </summary>
         private void InitializeComponent() {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             this.dgcWorkers = new System.Windows.Forms.DataGridView();
             this.BtnChangeWorker = new System.Windows.Forms.Button();
             this.BtnBackToHomeScreen = new System.Windows.Forms.Button();
             this.BtnAddWorker = new System.Windows.Forms.Button();
             this.BtnDeleteWorker = new System.Windows.Forms.Button();
             this.btnCearchWorker = new System.Windows.Forms.Button();
+            this.textSearchWorker2 = new System.Windows.Forms.TextBox();
+            this.btnSearchWorker2 = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dgcWorkers)).BeginInit();
             this.SuspendLayout();
             // 
             // dgcWorkers
             // 
-            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F);
-            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgcWorkers.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
             this.dgcWorkers.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dgcWorkers.DefaultCellStyle = dataGridViewCellStyle2;
-            this.dgcWorkers.Location = new System.Drawing.Point(16, 16);
-            this.dgcWorkers.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
+            this.dgcWorkers.Location = new System.Drawing.Point(16, 83);
+            this.dgcWorkers.Margin = new System.Windows.Forms.Padding(5);
             this.dgcWorkers.Name = "dgcWorkers";
-            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle3.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle3.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F);
-            dataGridViewCellStyle3.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgcWorkers.RowHeadersDefaultCellStyle = dataGridViewCellStyle3;
             this.dgcWorkers.RowHeadersWidth = 100;
             this.dgcWorkers.RowTemplate.DefaultCellStyle.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.dgcWorkers.Size = new System.Drawing.Size(985, 526);
+            this.dgcWorkers.Size = new System.Drawing.Size(985, 459);
             this.dgcWorkers.TabIndex = 5;
             // 
             // BtnChangeWorker
@@ -132,11 +107,33 @@
             this.btnCearchWorker.UseVisualStyleBackColor = false;
             this.btnCearchWorker.Click += new System.EventHandler(this.btnCearchWorker_Click);
             // 
+            // textSearchWorker2
+            // 
+            this.textSearchWorker2.Font = new System.Drawing.Font("Arial Nova", 11F, System.Drawing.FontStyle.Bold);
+            this.textSearchWorker2.Location = new System.Drawing.Point(21, 33);
+            this.textSearchWorker2.Name = "textSearchWorker2";
+            this.textSearchWorker2.Size = new System.Drawing.Size(276, 30);
+            this.textSearchWorker2.TabIndex = 11;
+            // 
+            // btnSearchWorker2
+            // 
+            this.btnSearchWorker2.BackColor = System.Drawing.SystemColors.MenuHighlight;
+            this.btnSearchWorker2.Font = new System.Drawing.Font("Arial Nova", 11F, System.Drawing.FontStyle.Bold);
+            this.btnSearchWorker2.Location = new System.Drawing.Point(303, 33);
+            this.btnSearchWorker2.Name = "btnSearchWorker2";
+            this.btnSearchWorker2.Size = new System.Drawing.Size(209, 30);
+            this.btnSearchWorker2.TabIndex = 12;
+            this.btnSearchWorker2.Text = "Pretraži zaposlenika";
+            this.btnSearchWorker2.UseVisualStyleBackColor = false;
+            this.btnSearchWorker2.Click += new System.EventHandler(this.button1_Click);
+            // 
             // FrmWorkers
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 25F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1017, 611);
+            this.Controls.Add(this.btnSearchWorker2);
+            this.Controls.Add(this.textSearchWorker2);
             this.Controls.Add(this.btnCearchWorker);
             this.Controls.Add(this.BtnChangeWorker);
             this.Controls.Add(this.BtnBackToHomeScreen);
@@ -144,13 +141,14 @@
             this.Controls.Add(this.BtnDeleteWorker);
             this.Controls.Add(this.dgcWorkers);
             this.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
+            this.Margin = new System.Windows.Forms.Padding(5);
             this.Name = "FrmWorkers";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "FrmWorkers";
             this.Load += new System.EventHandler(this.FrmWorkers_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dgcWorkers)).EndInit();
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
@@ -162,5 +160,7 @@
         private System.Windows.Forms.Button BtnAddWorker;
         private System.Windows.Forms.Button BtnDeleteWorker;
         private System.Windows.Forms.Button btnCearchWorker;
+        private System.Windows.Forms.TextBox textSearchWorker2;
+        private System.Windows.Forms.Button btnSearchWorker2;
     }
 }

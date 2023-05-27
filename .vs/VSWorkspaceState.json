@@ -2,8 +2,9 @@
   "ExpandedNodes": [
     "",
     "\\Software",
-    "\\Software\\Lannister"
+    "\\Software\\Lannister",
+    "\\Software\\Lannister\\Lannister"
   ],
-  "SelectedNode": "\\Software\\Lannister",
+  "SelectedNode": "\\Software\\Lannister\\Lannister\\Lannister.sln",
   "PreviewInSolutionExplorer": false
 }
