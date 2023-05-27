@@ -31,6 +31,7 @@
             this.btnCearchWorker = new System.Windows.Forms.Button();
             this.textSearchWorker2 = new System.Windows.Forms.TextBox();
             this.btnSearchWorker2 = new System.Windows.Forms.Button();
+            this.btnRefresh = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dgcWorkers)).BeginInit();
             this.SuspendLayout();
             // 
@@ -110,7 +111,7 @@
             // textSearchWorker2
             // 
             this.textSearchWorker2.Font = new System.Drawing.Font("Arial Nova", 11F, System.Drawing.FontStyle.Bold);
-            this.textSearchWorker2.Location = new System.Drawing.Point(21, 33);
+            this.textSearchWorker2.Location = new System.Drawing.Point(21, 26);
             this.textSearchWorker2.Name = "textSearchWorker2";
             this.textSearchWorker2.Size = new System.Drawing.Size(276, 30);
             this.textSearchWorker2.TabIndex = 11;
@@ -119,19 +120,32 @@
             // 
             this.btnSearchWorker2.BackColor = System.Drawing.SystemColors.MenuHighlight;
             this.btnSearchWorker2.Font = new System.Drawing.Font("Arial Nova", 11F, System.Drawing.FontStyle.Bold);
-            this.btnSearchWorker2.Location = new System.Drawing.Point(303, 33);
+            this.btnSearchWorker2.Location = new System.Drawing.Point(303, 12);
             this.btnSearchWorker2.Name = "btnSearchWorker2";
-            this.btnSearchWorker2.Size = new System.Drawing.Size(209, 30);
+            this.btnSearchWorker2.Size = new System.Drawing.Size(221, 56);
             this.btnSearchWorker2.TabIndex = 12;
             this.btnSearchWorker2.Text = "Pretraži zaposlenika";
             this.btnSearchWorker2.UseVisualStyleBackColor = false;
             this.btnSearchWorker2.Click += new System.EventHandler(this.button1_Click);
+            // 
+            // btnRefresh
+            // 
+            this.btnRefresh.BackColor = System.Drawing.SystemColors.MenuHighlight;
+            this.btnRefresh.Font = new System.Drawing.Font("Arial Nova", 11F, System.Drawing.FontStyle.Bold);
+            this.btnRefresh.Location = new System.Drawing.Point(530, 12);
+            this.btnRefresh.Name = "btnRefresh";
+            this.btnRefresh.Size = new System.Drawing.Size(221, 56);
+            this.btnRefresh.TabIndex = 13;
+            this.btnRefresh.Text = "Osvježi rezultate";
+            this.btnRefresh.UseVisualStyleBackColor = false;
+            this.btnRefresh.Click += new System.EventHandler(this.btnRefresh_Click);
             // 
             // FrmWorkers
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 25F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1017, 611);
+            this.Controls.Add(this.btnRefresh);
             this.Controls.Add(this.btnSearchWorker2);
             this.Controls.Add(this.textSearchWorker2);
             this.Controls.Add(this.btnCearchWorker);
@@ -162,5 +176,6 @@
         private System.Windows.Forms.Button btnCearchWorker;
         private System.Windows.Forms.TextBox textSearchWorker2;
         private System.Windows.Forms.Button btnSearchWorker2;
+        private System.Windows.Forms.Button btnRefresh;
     }
 }

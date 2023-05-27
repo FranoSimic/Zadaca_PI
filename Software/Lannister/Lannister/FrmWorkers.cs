@@ -46,8 +46,6 @@ namespace Lannister {
         }
 
         private void BtnAddWorker_Click(object sender, EventArgs e) {
-            Hide();
-            Close();
             new FrmAddWorker().ShowDialog();
         }
 
@@ -57,17 +55,12 @@ namespace Lannister {
                 int id = SelectedWorker().Id;
                 WorkersRepository.DeleteWorker(id);
                 MessageBox.Show("Uspješno ste obrisali zaposlenika!", "Uspješno", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                Hide();
-                Close();
-                new FrmWorkers().ShowDialog();
             } else {
                 MessageBox.Show("Nije obrisan zaposlenik!", "Problem", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
 
         private void BtnChangeWorker_Click(object sender, EventArgs e) {
-            Hide();
-            Close();
             new ChangeWorker(SelectedWorker().Id).ShowDialog();
         }
 
@@ -90,5 +83,9 @@ namespace Lannister {
             }
         }
 
+        private void btnRefresh_Click(object sender, EventArgs e) {
+            List<Worker> workers = WorkersRepository.GetWorkersList();
+            dgcWorkers.DataSource = workers;
+        }
     }
 }

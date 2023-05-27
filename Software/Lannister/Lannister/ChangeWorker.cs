@@ -36,13 +36,11 @@ namespace Lannister {
             string OIB = txtOIBChange.Text;
             WorkersRepository.UpdateWorker(Id_Zaposlenika, Korisnicko_ime, Lozinka, Ime, Prezime, OIB);
             Hide();
-            new FrmWorkers().ShowDialog();
         }
 
         private void button1_Click(object sender, EventArgs e) {
             Hide();
             Close();
-            new FrmWorkers().ShowDialog();
         }
     }
 }

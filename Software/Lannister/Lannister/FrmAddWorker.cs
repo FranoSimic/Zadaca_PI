@@ -29,7 +29,7 @@ namespace Lannister {
                     WorkersRepository.AddWorker(Id_Zaposlenika, Korisnicko_ime, Lozinka, Ime, Prezime, OIB);
                     MessageBox.Show("Uspješno ste dodali zaposlenika!", "Uspješno!", MessageBoxButtons.OK, MessageBoxIcon.Information);
                     Hide();
-                    new FrmWorkers().ShowDialog();
+                    Close();
                 } else {
                     MessageBox.Show("Lozinke se ne podudaraju!", "Problem", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
@@ -41,7 +41,6 @@ namespace Lannister {
         private void BtnIzlaz_Click(object sender, EventArgs e) {
             Hide();
             Close();
-            new FrmWorkers().ShowDialog();
         }
     }
 }
