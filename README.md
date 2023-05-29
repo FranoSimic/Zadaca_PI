@@ -22,3 +22,8 @@ https://github.com/foivz/pi2023-zadace-fsimic21/blob/master/Korisni%C4%8Dki%20za
 ## Resursi
 
 Svi resursi nalaze se u mapi _Documentation_.
+
+## Korisnički podaci za prijavu u aplikaciju
+Korisničko ime: vlasnica
+
+Lozinka: vlasnica
